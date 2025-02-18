@@ -90,6 +90,10 @@ public class UI {
                 case "12":
                     service.viewObjectsByGivenCriteria(scanner.nextLine());
                     break;
+                case "13":
+                    Charaktere object = service.findObjectById(readObjectId(scanner));
+                    service.sortProducts(object,readSorter(scanner));
+                    break;
 
 
 

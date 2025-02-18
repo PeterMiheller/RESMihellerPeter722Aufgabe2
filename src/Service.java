@@ -199,4 +199,23 @@ public class Service {
             System.out.println(object);
         }
     }
+
+    /**
+     * Sorts and displays the objects that correspond to a criteria
+     *
+     * @param object  The object whose list is going to be sorted
+     * @param sorting The sorting order (e.g., "aufsteigend" or "absteigend").
+     */
+
+    public void sortProducts(Charaktere object, String sorting) {
+        List<Produkte> data = object.getObjectList();
+        if (sorting.equals("aufsteigend")) {
+            data.sort((p1, p2) -> (int) p1.getPreis());
+        } else if (sorting.equals("absteigend")) {
+            data.sort((p2, p1) -> (int) p1.getPreis());
+        }
+        for (Produkte o : data) {
+            System.out.println(o);
+        }
+    }
 }
