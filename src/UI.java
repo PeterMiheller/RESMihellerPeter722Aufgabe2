@@ -41,7 +41,7 @@ public class UI {
                     8. Get Product by Name
                     9. Update Product
                     10. Get all Product
-                    11. Filter EntityById nach Ort
+                    11. Filter Characters nach Region
                     12. Filter EntityById nach EntityByName gekauft in ein Jahreszeit
                     13. Sort EntityByNamee von EntityById
 
@@ -84,6 +84,10 @@ public class UI {
                 case "10":
                     service.getAndShowAllObjectsByName();
                     break;
+                case "11":
+                    service.filterObjectByGivenCriteria(scanner.nextLine());
+                    break;
+
 
 
                 default:

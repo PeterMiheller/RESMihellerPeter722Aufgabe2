@@ -161,4 +161,17 @@ public class Service {
     public Charaktere findObjectById(int id) {
         return objectByIdRepo.get(id);
     }
+
+    /**
+     * Filters objects by a given criteria
+     *
+     * @param criteria The criteria to filter client by.
+     */
+    public void filterObjectByGivenCriteria(String criteria) {
+        List<Charaktere> filteredList = objectByIdRepo.getAll().stream().filter(k -> Objects.equals(k.getOrt(), criteria)).toList();
+        for (Charaktere object : filteredList) {
+            System.out.println(object);
+        }
+
+    }
 }
