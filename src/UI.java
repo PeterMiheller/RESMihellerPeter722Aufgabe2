@@ -85,6 +85,7 @@ public class UI {
                     service.getAndShowAllObjectsByName();
                     break;
 
+
                 default:
             }
         }
