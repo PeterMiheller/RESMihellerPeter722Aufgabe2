@@ -87,6 +87,10 @@ public class UI {
                 case "11":
                     service.filterObjectByGivenCriteria(scanner.nextLine());
                     break;
+                case "12":
+                    service.viewObjectsByGivenCriteria(scanner.nextLine());
+                    break;
+
 
 
 

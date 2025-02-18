@@ -173,5 +173,30 @@ public class Service {
             System.out.println(object);
         }
 
+
+
+    }
+    /**
+     * Displays objects by a given criteria.
+     *
+     * @param criteria The criteria to filter objects by.
+     */
+    public void viewObjectsByGivenCriteria(String criteria) {
+        List<Charaktere> data = objectByIdRepo.getAll();
+        List<Charaktere> filteredObjects = new ArrayList<>();
+        for (Charaktere k : data) {
+            boolean found = false;
+            for (Produkte p : k.getObjectList()) {
+                if (Objects.equals(p.getUniversum(), criteria)) {
+                    found = true;
+                }
+            }
+            if (found) {
+                filteredObjects.add(k);
+            }
+        }
+        for (Charaktere object : filteredObjects) {
+            System.out.println(object);
+        }
     }
 }
