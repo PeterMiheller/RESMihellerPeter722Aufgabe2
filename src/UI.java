@@ -42,8 +42,8 @@ public class UI {
                     9. Update Product
                     10. Get all Product
                     11. Filter Characters nach Region
-                    12. Filter EntityById nach EntityByName gekauft in ein Jahreszeit
-                    13. Sort EntityByNamee von EntityById
+                    12. Filter Characters nach Produkt gekauft in ein Region
+                    13. Sort Produkte von Charactere
 
                     0. Exit
                     """);
